@@ -1,0 +1,391 @@
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  --font-medium: 500;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input,
+
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LOGIN ===============*/
+.login {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.login__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.login__form {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+
+  border: 2px solid var(--white-color);
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+}
+.login__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 2rem;
+}
+.login__content, .login__box {
+  display: grid;
+}
+.login__content {
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.login__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid var(--white-color);
+}
+.login__icon, .login__eye {
+  font-size: 1.25rem;
+}
+.login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+}
+.login__box-input {
+  position: relative;
+}
+.login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: var(--font-medium);
+  transition: top 0.3s, font-size 0.3s;
+}
+.login__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+.login__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+.login__check, .login__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login__check {
+  margin-bottom: 1.5rem;
+}
+.login__check-label, .login__forgot, .login__register {
+  font-size: var(--small-font-size);
+}
+.login__check-group {
+  column-gap: 0.5rem;
+}
+.login__check-input {
+  width: 16px;
+  height: 16px;
+}
+.login__forgot {
+  color: var(--white-color);
+}
+.login__forgot:hover {
+  text-decoration: underline;
+}
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.login__register {
+  text-align: center;
+}
+.login__register a {
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+.login__register a:hover {
+  text-decoration: underline;
+}
+
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .login {
+    justify-content: center;
+  }
+  .login__form {
+    width: 432px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+  .login__title {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
+    background: #1f242d;
+    color: aliceblue;
+    
+ }
+.header1{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    border: 2px solid gray;
+   position: sticky;
+   top: 0;
+   z-index: 100;
+}
+
+.login__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+.header{
+    display: flex;
+    justify-content:space-between
+}
+
+.info{
+  
+    margin-right: 40px;
+    margin-top: 10px;
+    width: 500px;
+    height: 500px;
+    
+    justify-content: space-between;
+    text-align: center;
+
+}
+.name input{
+    size: 50%;
+    font-size: large;
+    border: 3px solid grey;
+    float: right;
+    width: 100px;
+    margin-right: 20px;
+    height: 20px;
+    margin-left: 20px;
+    border-radius: 3rem;
+    margin-top: 20px;
+    text-align: center;
+    
+
+    
+}
+.emil input{
+
+    size: 50%;
+    font-size: large;
+    width: 300px;
+    float: right;
+    text-align: center;
+    height: 20px;
+    border-radius: 2rem;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-left: 30px;
+
+}
+.pas input{
+
+    size: 50%;
+    font-size: large;
+    width: 300px;
+    float: right;
+    text-align: center;
+    height: 20px;
+    border-radius: 3rem;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+
+.dat input{
+    size: 50%;
+    font-size: large;
+    width: 300px;
+    float: right;
+    text-align: center;
+    height: 20px;
+    border-radius: 3rem;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-left: 30px;
+
+}
+.pho input{
+    size: 50%;
+    font-size: large;
+    width: 300px;
+    float: right;
+    text-align: center;
+    height: 20px;
+    border-radius: 3rem;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-left: 30px;
+
+}
+.sta{
+    size: 50%;
+    font-size: large;
+    float: right;
+    width: 300px;
+    float: right;
+    text-align: center;
+    height: 20px;
+    border-radius: 3rem;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-left: 30px;
+
+}
+.text{
+    color: rgb(248, 244, 244);
+   
+    width: 300px;
+    height: 200px;
+    margin-right: 50px;
+    
+    text-align: center;
+}
+.color{
+    color: crimson;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+.line{
+    width: 300px;
+    float: right;
+    height: 2px;
+    margin-top: 20px;
+    background-color: rgb(5, 7, 6);
+}
+
+.inen a{
+    text-decoration: none
+}
+.bo{
+    font-size: large;
+    cursor:e-resize;
+}
+
+.sss h3{
+    text-align: center;
+    margin-bottom: 20px;
+   
+
+}
+.dd{
+    width: 30px;
+    height: 20px;
+    background-color: rgb(10, 188, 219);
+}
+.sss{
+    color: rgb(249, 249, 249);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+.footer{
+    
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    background:  #323946;
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background:#0ef;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem #0ef;
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: #323946;
+} */
+
+
+
