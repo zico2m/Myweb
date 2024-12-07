@@ -34,7 +34,7 @@ document.getElementById('login').addEventListener('submit',function(event){
    var pasoed=document.getElementById('login-pass').value;
    var idimage=document.getElementById('idimage').files[0];
 
-   if(email==='zico2001s@yahoo.com' && pasoed==='zico7385'){
+   if(email==='zico@yahoo.com' && pasoed==='123'){
 
       if(idimage){
          FileReader;
